@@ -927,7 +927,7 @@ namespace FourSlash {
 
             assert.equal(actual.hasAction, hasAction);
 
-            if (text) {
+            if (text !== undefined) {
                 const actualDetails = this.getCompletionEntryDetails(actual.name, actual.source);
                 assert.equal(ts.displayPartsToString(actualDetails.displayParts), text);
                 assert.equal(ts.displayPartsToString(actualDetails.documentation), documentation || "");
